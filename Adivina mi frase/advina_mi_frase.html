@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Adivina mi frase</title>
+	<script type="text/javascript" src="js/function.js"></script>
+
+	<style type="text/css">
+
+		body{
+			color: white;
+			background-color: black;
+			text-align: center;
+			text-decoration: red;
+		}
+
+		div{
+			display:block; 
+		    width:100%; 
+		    height:100%%; 
+		    position:absolute; 
+		}
+	</style>
+
+</head>
+<body onload="load()">
+<div> 
+	<table>
+		<tr>			
+			<td>
+				<fieldset>
+				<legend>Opciones de Juego</legend>
+
+					<table>
+						<tr>
+							<td>
+								<span>Número de opotunidades :</span>
+							</td>
+							<td>
+								<input type="text" id="idNumberOfOpportunities"/>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<span>Frase :</span>
+							</td>
+							<td>
+
+								<textarea id="idPhrase"> </textarea>
+							</td>
+						</tr>
+
+						<tr>
+							<td>
+								<span>Intentar :</span>
+							</td>
+							<td>
+								<input type="text" id="idTrying" disabled="true" />
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="2">
+								<input type="button" id="idStart" value="START" onclick="start()" />
+
+								<input type="button" id="idShow_hide_Phrase"  disabled="true" value="MOSTRAR/OCULTAR FRASE" 
+								onclick="show_hide_Phrase()" />
+							
+								<input type="button" id="idTryOut" disabled="true" value="PROBAR" onclick="tryOut()" />
+							</td>
+						</tr>					
+					</table>
+				</fieldset>
+
+			</td>
+
+			<td>
+					
+				<fieldset>
+				<legend><h2 id="idMessage"></h2></legend>
+
+					<table>
+						<tr>
+							<td>
+								<h3>Intentos Restantes :</h3>
+							</td>
+							<td>
+								<h3 id="idAttempts"/>
+							</td>
+						</tr>
+
+						<tr>
+							<td colspan="2">
+								<h3 id="idAdvancePhrase"/>
+							</td>
+						</tr>
+
+						
+					</table>
+				</fieldset>		
+				
+			</td>
+
+		</tr>
+
+	</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>Secuela de la leyenda de Tifis</title>
+	<script type="text/javascript" src="js/function.js"></script>
+
+	<style type="text/css">
+
+		body{
+			color: white;
+			background-color: black;
+			text-align: center;
+			text-decoration: red;
+		}
+
+		div{
+			display:block; 
+		    width:600px; 
+		    height:400px; 
+		    position:absolute; 
+		    top:50%; 
+		    left:50%; 
+		    margin-top:-200px; 
+		    margin-left:-300px;
+		}
+		p{
+
+			font-size:10px;
+			text-align: justify;
+		}
+
+	</style>
+</head>
+<body onload="loadGame()">
+
+	<div id="idFirstScreen">
+		
+		<progress id="idProgress" value="0" max="100" title="0%"></progress>
+
+	</div>
+
+	<div id="idSecondScreen" style="visibility: hidden">
+		<table>
+
+		<tr><h2 id="idMessage"></h2></tr>
+
+		<tr>
+
+			<td>				
+				<h2>Historia</h2>
+				<p>Cuenta la leyenda, que luego de que Tifis(Agente Secreto de la NSA), intento impedir los planes de destruir el mundo de Liz (terorista, con conocimientos en bombas nucleares, que quiere destruir todos los servidores del mundo y dejar al mundo sin información). Esta fue capturada, pero lo que Liz no sabía era que el hermano menor de Tifis apodado "anthbravo" al tomar conocimiento del problema buscaria impedir las locuras de Liz. 
+				EL TENDRA  QUE DESACTIVAR TODAS LAS BOMBAS Y SALVAR A TIFIS!
+				</p>
+
+				<fieldset>
+				<legend>Nivel de Dificultad</legend>
+					
+					<table>
+
+					<tr>
+						<td>N° de Bombas</td> 
+						<td><input id="idNumberOfBomb" type="number" min="1" max="100" value="1" size="100" />
+						</td>
+					<tr>
+
+					<tr>
+						<td>Tiempo para explosión de bombas (s)</td> 
+						<td><input id="idTimeForExplosion" type="number" min="1" max="10" value="1"/>
+						</td>
+					<tr>
+
+					<tr>					
+						<td colspan="2"><input id="idStart" type="button" value="START" onclick="start()" />
+						</td>
+					<tr>
+
+					</table>
+
+				</fieldset>
+
+			</td> 
+
+
+			<td>
+				
+			<canvas id="idCanvas" width="500" height="525"/>
+
+			</td>
+
+		</tr>
+			
+		</table>	
+	</div>
+</body>
+</html>
